@@ -116,11 +116,6 @@ h6 {
   border-radius: 12px;
 }
 
-@media(max-width:960px) {
-  .hero-wrapper-version1 .hero-content {
-    padding: 47px;
-  }
-}
 
 
 
@@ -137,6 +132,7 @@ h6 {
   background: #ffffff;
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(155, 101, 242, 0.61) 50%, rgba(255, 255, 255, 1) 100%);
 }
+
 /* MAIN PARENT */
 .tabs-wrapper {
   background: #ffffff;
@@ -154,10 +150,9 @@ h6 {
 }
 
 .tabs-container h1 {
-  font-size: 200px;
+  font-size: 12rem;
   text-transform: uppercase;
   color: #f0f8ff54;
-  ;
 }
 
 /* SEARCH */
@@ -252,6 +247,7 @@ h6 {
   background: #f9fad7;
   background: linear-gradient(90deg, rgba(249, 250, 215, 1) 0%, rgba(255, 255, 255, 1) 53%, rgba(249, 250, 215, 1) 100%);
 }
+
 .tabs-container .card:nth-child(9) {
   background: #f9fad7;
   background: linear-gradient(90deg, rgba(249, 250, 215, 1) 0%, rgba(255, 255, 255, 1) 53%, rgba(249, 250, 215, 1) 100%);
@@ -262,13 +258,35 @@ h6 {
   border-bottom: 0;
   border-radius: 30px;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0 5px;
+}
+
+
+.tabs-container .card-header .right {
+  width: 25px;
+  height: 25px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.tabs-container .card-header .left .badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .tabs-container .badge {
   background-image: linear-gradient(to right, #000000, #000000, #18191a, #4e4376);
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
   color: #fff;
-  padding: 12px;
+  padding: 8px;
   border-radius: 20px;
   font-size: 12px;
 }
@@ -289,6 +307,56 @@ h6 {
 .tabs-container .tags span {
   font-size: 11px;
   padding: 6px 10px;
-  background: #eee;
+  background: #ffffff;
   border-radius: 10px;
+}
+
+
+
+
+@media(max-width:960px) {
+  .hero-wrapper-version1 .hero-content {
+    padding: 47px;
+  }
+
+  .tabs-container .search-box {
+    margin-top: -8px;
+  }
+
+  .tabs-container .search-box input {
+    max-width: 450px;
+  }
+
+  .tabs-container h1 {
+    font-size: 7rem;
+  }
+
+  .tabs-container .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media(max-width:768px) {
+  .tabs-container .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hero-wrapper-version1 .hero-content {
+    padding: 47px;
+  }
+
+  .tabs-container .search-box {
+    margin-top: -8px;
+  }
+
+  .tabs-container .search-box input {
+    max-width: 450px;
+  }
+
+  .tabs-container h1 {
+    font-size: 4rem;
+  }
+
 }

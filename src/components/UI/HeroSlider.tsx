@@ -41,13 +41,13 @@ const HeroSlider = () => {
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={false}
+        autoplay={true}
         loop
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <section className="hero">
-              
+
               {/* LEFT CONTENT */}
               <div className="hero-content">
                 <h1>{slide.title}</h1>
