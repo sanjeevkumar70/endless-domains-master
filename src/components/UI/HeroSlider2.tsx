@@ -5,7 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
-import "./hero.css";
+// import "./hero.css";
 
 import img1 from "@/assets/images/image1.png";
 import img2 from "@/assets/images/Group.png";
@@ -42,12 +42,12 @@ const HeroSlider2 = () => {
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={false}
         loop
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="hero-container2">
+            <div className="hero-container">
 
               {/* LEFT CONTENT */}
               <div className="hero-left">
