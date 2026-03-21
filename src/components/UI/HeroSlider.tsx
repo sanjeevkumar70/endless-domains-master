@@ -41,7 +41,7 @@ const HeroSlider = () => {
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={true}
+        autoplay={false}
         loop
       >
         {slides.map((slide, index) => (

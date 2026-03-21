@@ -315,8 +315,21 @@ h6 {
 
 
 @media(max-width:960px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero .hero-content {
+    text-align: center;
+  }
+
   .hero-wrapper-version1 .hero-content {
     padding: 47px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .tabs-container .search-box {
