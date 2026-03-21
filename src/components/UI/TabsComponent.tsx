@@ -10,28 +10,27 @@ import img6 from "@/assets/images/icon6.svg";
 import img7 from "@/assets/images/icon7.svg";
 
 const tabs = ["Trending", "Old", "Newest"];
-const data = new Array(9).fill(null);
 const cardsData = [
   {
     id: 1,
     title: "Klink Finance",
     headerIcon: img6,
-    icon: img1,
+    icon: img3,
     desc: "Join 1,000,000+ people across the world turning online activity into income ⚡",
     tags: ["Web3", "BNB Ecosystem", "AdTech", "Affiliate Marketing"],
   },
   {
     id: 2,
     title: "Klink Finance",
-    headerIcon: img6,
-    icon: img1,
+    headerIcon: img7,
+    icon: img2,
     desc: "Join 1,000,000+ people across the world turning online activity into income ⚡",
     tags: ["Web3", "BNB Ecosystem", "AdTech", "Affiliate Marketing"],
   },
   {
     id: 3,
     title: "Klink Finance",
-    headerIcon: img6,
+    headerIcon: img5,
     icon: img1,
     desc: "Join 1,000,000+ people across the world turning online activity into income ⚡",
     tags: ["Web3", "BNB Ecosystem", "AdTech", "Affiliate Marketing"],
@@ -39,7 +38,7 @@ const cardsData = [
   {
     id: 4,
     title: "Klink Finance",
-    headerIcon: img6,
+    headerIcon: img4,
     icon: img1,
     desc: "Join 1,000,000+ people across the world turning online activity into income ⚡",
     tags: ["Web3", "BNB Ecosystem", "AdTech", "Affiliate Marketing"],
@@ -47,7 +46,7 @@ const cardsData = [
   {
     id: 5,
     title: "Klink Finance",
-    headerIcon: img6,
+    headerIcon: img5,
     icon: img1,
     desc: "Join 1,000,000+ people across the world turning online activity into income ⚡",
     tags: ["Web3", "BNB Ecosystem", "AdTech", "Affiliate Marketing"],
@@ -55,7 +54,7 @@ const cardsData = [
   {
     id: 6,
     title: "Klink Finance",
-    headerIcon: img6,
+    headerIcon: img4,
     icon: img1,
     desc: "Join 1,000,000+ people across the world turning online activity into income ⚡",
     tags: ["Web3", "BNB Ecosystem", "AdTech", "Affiliate Marketing"],
@@ -63,7 +62,7 @@ const cardsData = [
   {
     id: 7,
     title: "Klink Finance",
-    headerIcon: img6,
+    headerIcon: img5,
     icon: img1,
     desc: "Join 1,000,000+ people across the world turning online activity into income ⚡",
     tags: ["Web3", "BNB Ecosystem", "AdTech", "Affiliate Marketing"],
@@ -79,7 +78,7 @@ const cardsData = [
   {
     id: 9,
     title: "Klink Finance",
-    headerIcon: img6,
+    headerIcon: img5,
     icon: img1,
     desc: "Join 1,000,000+ people across the world turning online activity into income ⚡",
     tags: ["Web3", "BNB Ecosystem", "AdTech", "Affiliate Marketing"],
@@ -95,13 +94,13 @@ const TabsComponent = () => {
       <div className="tabs-container">
         <h1>discover</h1>
 
-        {/* 🔍 Search */}
+        {/*  Search */}
         <div className="search-box">
           <input type="text" placeholder="search" />
           <button>Search</button>
         </div>
 
-        {/* 🔘 Tabs */}
+        {/*  Tabs */}
         <div className="tabs">
           {tabs.map((tab) => (
             <button
@@ -115,52 +114,25 @@ const TabsComponent = () => {
         </div>
 
         <div className="grid">
-          {/* {data.map((_, i) => (
-            <div className="card" key={i}>
-              <div className="card-header">
-                <span className="badge">Klink Finance</span>
-              </div>
-
-              <p className="desc">
-                Join 1,000,000+ people across the world turning online
-                activity into income ⚡
-              </p>
-
-              <div className="tags">
-                <span>Web3</span>
-                <span>BNB Ecosystem</span>
-                <span>AdTech</span>
-                <span>Affiliate Marketing</span>
-              </div>
-            </div>
-          ))} */}
           {cardsData.map((item) => (
             <div className="card" key={item.id}>
-
               <div className="card-header">
                 <div className="left">
-
-                  {/* <span className="badge"> <img src={item.headerIcon} alt="logo" />{item.title}</span> */}
                   <span className="badge">  <Image src={item.headerIcon} alt="logo" width={25} height={25} />{item.title}</span>
                 </div>
-
                 <div className="right">
                   <Image src={item.icon} alt="logo" width={20} height={20} />
                 </div>
               </div>
-
               <p className="desc">{item.desc}</p>
-
               <div className="tags">
                 {item.tags.map((tag, i) => (
                   <span key={i}>{tag}</span>
                 ))}
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );

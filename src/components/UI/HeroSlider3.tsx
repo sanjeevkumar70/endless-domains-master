@@ -1,15 +1,12 @@
 "use client";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import Image from "next/image";
 import "swiper/css";
+import Image from "next/image";
 import "swiper/css/pagination";
-// import "./hero.css";
-
 import img1 from "@/assets/images/image2.png";
 import img2 from "@/assets/images/Group.png";
 import img3 from "@/assets/images/Group.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 
 interface Slide {
   title: string;
@@ -49,7 +46,6 @@ const HeroSlider3 = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="hero-container">
-
               {/* LEFT CONTENT */}
               <div className="hero-left">
                 <h1>{slide.title}</h1>
@@ -65,7 +61,6 @@ const HeroSlider3 = () => {
                   className="hero-img"
                 />
               </div>
-
             </div>
           </SwiperSlide>
         ))}
