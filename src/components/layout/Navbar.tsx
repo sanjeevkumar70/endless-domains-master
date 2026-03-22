@@ -14,11 +14,11 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav mx-auto gap-3">
-                        <li className="nav-item">Domains</li>
-                        <li className="nav-item">Marketplace</li>
-                        <li className="nav-item">Parked Domains</li>
-                        <li className="nav-item">Blog</li>
-                        <li className="nav-item">Affiliate</li>
+                        <li className="nav-item"><Link href={"/"}>Home</Link></li>
+                        <li className="nav-item"><Link href={"/about"}>About</Link></li>
+                        <li className="nav-item"><Link href={"/blog"}>Blog</Link></li>
+                        <li className="nav-item"><Link href={"/gallery"}>Gallery</Link></li>
+                        <li className="nav-item"><Link href={"/contact"}>Contact</Link></li>
                     </ul>
 
                     <div className="d-flex gap-2">
