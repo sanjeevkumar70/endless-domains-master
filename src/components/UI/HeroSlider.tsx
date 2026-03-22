@@ -6,55 +6,39 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import img1 from "@/assets/images/Group.png";
-import img2 from "@/assets/images/Group.png";
-import img3 from "@/assets/images/Group.png";
-
 interface Slide {
   title: string;
   desc: string;
   image: any;
 }
 
-const slides: Slide[] = [
-  {
-    title: "Launch Portfolio For Underlying Digital Assets",
-    desc: "A unified platform to organize, manage, and showcase your on-chain asset portfolio.",
-    image: img1,
-  },
-  {
-    title: "Manage Your Digital Identity Easily",
-    desc: "Secure and scalable domain management system.",
-    image: img2,
-  },
-  {
-    title: "Buy & Sell Domains Seamlessly",
-    desc: "Explore marketplace and premium domains.",
-    image: img3,
-  },
-];
+interface Props {
+  data: Slide[];
+  version?: number;
+}
 
-const HeroSlider = () => {
+
+const HeroSlider = ({ data, version }: Props) => {
   return (
-    <div className="hero-wrapper-version1">
+    <div className={`hero-wrapper-version${version}`}>
       <Swiper
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={true}
+        autoplay={false}
         loop
       >
-        {slides.map((slide, index) => (
+        {data.map((slide, index) => (
           <SwiperSlide key={index}>
             <section className="hero">
 
-              {/* LEFT CONTENT */}
+              {/* LEFT CONTENT  */}
               <div className="hero-content">
                 <h1>{slide.title}</h1>
                 <p>{slide.desc}</p>
               </div>
 
-              {/* RIGHT IMAGE */}
+              {/* RIGHT IMAGE  */}
               <div className="hero-image">
                 <Image
                   src={slide.image}
